@@ -1,14 +1,46 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const GSheetReader = require('g-sheets-api');
+
+
+//google sheets stuff – will return sheetsData if it can
+
+function getSheetsData() {
+  
+  const gSheetsOptions = {
+    apiKey: process.env.GOOGLE_API_KEY,
+    sheetId: '19BQqRM0peLlyVHgHYjj24qhW0s4WqPR7LUU_TeH9W0o',
+    sheetNumber: 1,
+    returnAllResults: true
+  };
+
+  return new Promise((resolve, reject) => {
+    GSheetReader(gSheetsOptions, results => {
+      const sheetsData = results;
+      if(sheetsData){
+        resolve(sheetsData) // Resolve the promise with the sheetsData if available
+      } else {
+        reject('Unable to get sheetsData'); //Reject the promise if its not available
+      }
+    });
+  });
+
+  }
+
+app.get('/sheetsdata', async (req, res) => {
+  const sheetsData = await getSheetsData();
+  res.json(sheetsData);
+});
+
+
 
 const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.GPT_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
-
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
