@@ -3,8 +3,6 @@ const bodyParser = require('body-parser');
 const app = express();
 const GSheetReader = require('g-sheets-api');
 
-//favicon problem solving
-app.get('/favicon.ico', (req, res) => res.status(204));
 
 //vercel stuff
 const { v4 } = require('uuid');
