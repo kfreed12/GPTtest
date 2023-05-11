@@ -19,8 +19,6 @@ app.get('/api/item/:slug', (req, res) => {
   res.end(`Item: ${slug}`);
 });
 
-module.exports = app;
-
 
 //google sheets stuff – will return sheetsData if it can
 
@@ -100,3 +98,5 @@ app.post('/api/startWorld', async (req, res) => {
 app.listen(3000, () => {
   console.log('Server listening on port 3000');
 });
+
+module.exports = app;
