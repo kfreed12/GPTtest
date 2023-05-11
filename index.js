@@ -4,7 +4,7 @@ const app = express();
 const GSheetReader = require('g-sheets-api');
 
 
-//vercel stuff
+/*vercel stuff
 const { v4 } = require('uuid');
 
 //vercel stuff
@@ -18,7 +18,7 @@ app.get('/api', (req, res) => {
 app.get('/api/item/:slug', (req, res) => {
   const { slug } = req.params;
   res.end(`Item: ${slug}`);
-});
+}); */
 
 
 //google sheets stuff – will return sheetsData if it can
@@ -100,4 +100,5 @@ app.listen(3000, () => {
   console.log('Server listening on port 3000');
 });
 
-module.exports = app;
+//Vercel
+//module.exports = app;
