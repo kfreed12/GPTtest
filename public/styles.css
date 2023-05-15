@@ -17,7 +17,7 @@ html {
    font-weight: 200;
    display: flex;
    height: 100%;
-   background: (linear-gradient(212.9deg, #4A0808 19.64%, #47233D 56.05%, #1E1E1E 81.65%)) fixed;
+   background: linear-gradient(212.9deg, #4A0808 19.64%, #47233D 56.05%, #1E1E1E 81.65%) fixed;
    flex-direction: column;
    align-content: center;
    justify-content: flex-start;
