@@ -17,7 +17,7 @@ html {
    font-weight: 200;
    display: flex;
    height: 100%;
-   background: linear-gradient(235.8deg, #BD6267 8.23%, #5B4C97 81.65%) fixed;
+   background: (linear-gradient(212.9deg, #4A0808 19.64%, #47233D 56.05%, #1E1E1E 81.65%)) fixed;
    flex-direction: column;
    align-content: center;
    justify-content: flex-start;
@@ -28,7 +28,7 @@ html {
  #imgHeader {
    padding-top: 50px;
    width: 400px;
-   filter: drop-shadow(-7px 13px 12px rgba(112, 87, 183, 0.66)) drop-shadow(10px 12px 5px rgba(92, 73, 116, 0.8));
+   filter: drop-shadow(5px 22px 20px #32041B);
  }
  
  #form {
