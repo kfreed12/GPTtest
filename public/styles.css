@@ -60,7 +60,7 @@ html {
  .round-button {
    width: 80px;
    height: 80px;
-   background: linear-gradient(5.8deg, #ef99ad 8.23%, #0ccadfe3 101.65%);
+   /*background: linear-gradient(5.8deg, #ef99ad 8.23%, #0ccadfe3 101.65%);*/
    border-radius: 50%;
    border: none;
    margin-left: -90px;
@@ -72,7 +72,7 @@ html {
  }
  
  .round-button:hover {
-   background: linear-gradient(5.8deg, #ef99ad 8.23%, #0ccadfe3 101.65%);
+   /*background: linear-gradient(5.8deg, #ef99ad 8.23%, #0ccadfe3 101.65%);*/
    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
  }
 
